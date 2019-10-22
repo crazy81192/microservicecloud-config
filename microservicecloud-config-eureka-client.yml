@@ -26,7 +26,7 @@ spring:
     name: microservicecloud-config-eureka-client
 eureka: 
   instance: 
-    hostname: eureak7001.com
+    hostname: eureka7001.com
   client: 
     register-with-eureka: false 
     service-url: 
