@@ -4,7 +4,7 @@
     -dev
 ---
 server: 
-  port: 7001
+  port: 7001 #注册中心占用7001端口，冒号后面必须有空格
 spring: 
   profiles: dev
   application: 
