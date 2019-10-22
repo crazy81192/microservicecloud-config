@@ -5,24 +5,22 @@
 ---
 server: 
   port: 8001
-spring: 
+spring:
   profiles: dev
-  application: 
+  application:
     name: microservicecloud-config-dept-client
-    datasource:  
-      username: root 
-      password: 123456 
-      url: jdbc:mysql://192.168.95.129:3307/clouddb01?useUnicode=true&characterEncoding=utf8
-      driver-class-name: com.mysql.jdbc.Driver
-      type: com.alibaba.druid.pool.DruidDataSource
-      dbcp2:   
-        min-idle: 5   #数据库连接池的最小连接数
-        initial-size: 5   #连接数
-        max-total: 5    #最大连接数
-        max-wait-millis: 200    #最大超时时间
-mybatis:
-  config-location: classpath:mybatis/mybatis-config.xml
-  mapper-locations: classpath:mybatis/mapper/*.xml
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.95.129:3307/clouddb01?useUnicode=true&characterEncoding=utf8
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    dbcp2: 
+      min-idle: 5   #数据库连接池的最小连接数
+      initial-size: 5   #连接数
+      max-total: 5    #最大连接数
+      max-wait-millis: 200    #最大超时时间
+      
 eureka:
   client:
     service-url:  #客户端注册进eureka服务列表内
@@ -31,3 +29,13 @@ eureka:
   instance:
     instance-id: microservicecloud-dept8001 #自定义服务信息名称
     prefer-ip-address: true #访问路径可以访问ip地址
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  
+info: 
+  app.name: atguigu-microservicecloud
+  company.name: www.atguigu.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$ 
