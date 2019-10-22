@@ -1,4 +1,11 @@
 ﻿spring: 
+  profiles: 
+    active: 
+    -dev
+---
+server: 
+  port: 7001
+spring: 
   profiles: dev
   application: 
     name: microservicecloud-config-eureka-client
